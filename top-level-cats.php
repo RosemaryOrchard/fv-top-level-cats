@@ -85,7 +85,7 @@ function fv_top_level_categories_rewrite_rules($category_rewrite) {
 		///
 		
 		
-		$category_rewrite['('.$category_nicename.')/(?:feed/)?(feed|rdf|rss|rss2|atom)/?$'] = 'index.php?category_name=$matches[1]&feed=$matches[2]';
+		$category_rewrite['('.$category_nicename.')/(?:feed/)?(feed|rdf|rss|rss2|atom|json)/?$'] = 'index.php?category_name=$matches[1]&feed=$matches[2]';
 		$category_rewrite['('.$category_nicename.')/'. $wp_rewrite->pagination_base .'/?([0-9]{1,})/?$'] = 'index.php?category_name=$matches[1]&paged=$matches[2]';
     if( $bAMP ) {
       $category_rewrite['('.$category_nicename.')/amp/'. $wp_rewrite->pagination_base .'/?([0-9]{1,})/?$'] = 'index.php?amp&category_name=$matches[1]&paged=$matches[2]';
